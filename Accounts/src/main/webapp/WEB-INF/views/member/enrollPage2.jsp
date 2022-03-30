@@ -30,7 +30,7 @@
 		
 		//암호 암호확인 검사 같은값인지확인작업
 		var pwdValue = document.getElementById("userpwd").value;
-		var pwdValue2 = document.getElementById("userpwd2").val.ue;
+		var pwdValue2 = document.getElementById("userpwd2").value;
 		
 		if(pwdValue !== pwdValue2){
 			alert("암호확인이 일치하지 않습니다");
@@ -98,11 +98,11 @@
                                 
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" name="userpwd" class="form-control form-control-user" id="exampleFirstName"
+                                        <input type="password" name="userpwd" class="form-control form-control-user" id="userpwd"
                                             placeholder="Password" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user" id="exampleLastName"
+                                        <input type="password" class="form-control form-control-user" id="userpwd2"
                                             placeholder="Repeat Password">
                                     </div>
                                 </div>

@@ -16,8 +16,10 @@ public class CalDto implements java.io.Serializable{
 	private String year;
 	private String month;
 	private String date;
+	private String hour;
+	private String min;
 	
-	
+
 	public CalDto() {
 	}
 
@@ -113,7 +115,21 @@ public class CalDto implements java.io.Serializable{
 		this.date = date;
 	}
 
-	
+	public String getHour() {
+		return hour;
+	}
+
+	public void setHour(String hour) {
+		this.hour = hour;
+	}
+
+	public String getMin() {
+		return min;
+	}
+
+	public void setMin(String min) {
+		this.min = min;
+	}
 	
 	
 	

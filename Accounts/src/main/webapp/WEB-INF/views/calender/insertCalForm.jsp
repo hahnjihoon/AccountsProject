@@ -1,3 +1,5 @@
+<%@page import="java.util.Calendar" %>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,7 +12,10 @@
 	int month=Integer.parseInt(request.getParameter("month"));
 	int date=Integer.parseInt(request.getParameter("date"));
 	
-	
+	//현재시간
+	Calendar cal = Calendar.getInstance();
+	int hour = cal.get(Calendar.HOUR_OF_DAY);
+	int min = cal.get(Calendar.MINUTE);
 %>
 <script type="text/javascript">
 	function calendar(){
@@ -24,7 +29,7 @@
 	<table border="1" align="center">
 		<tr>
 			<th>ID</th>
-			<td><input type="text" name="id" value="여기도안됨" readonly /></td>
+			<td><input type="text" name="id" value="K001" readonly /></td>
 		</tr>
 		<tr>
 			<th>일시</th>
@@ -60,7 +65,7 @@
 						}
 					%>
 				</select>일
-				<%-- <select name="hour">
+				<select name="hour">
 					<%
 						for(int i=0;i<24;i++){
 							%>
@@ -79,7 +84,7 @@
 							<%							
 						}
 					%>
-				</select>분 --%>
+				</select>분
 			</td>
 		</tr>
 		<tr>

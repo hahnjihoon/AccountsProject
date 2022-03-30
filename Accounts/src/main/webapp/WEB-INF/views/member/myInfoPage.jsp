@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>web</title>
+<script type="text/javascript" src="${ pageContext.servletContext.contextPath }/resources/js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 function validate(){
 	var pwd1 = document.getElementById("userpwd").value;

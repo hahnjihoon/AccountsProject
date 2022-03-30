@@ -89,7 +89,7 @@
 					<a style="color:<%=fontColor(dayOfWeek, i) %>;"  href="calBoardList.do?year=<%=year%>&month=<%=month%>&date=<%=i%>"><%=i%></a>
 					
 					<a href="insertCalForm.do?year=<%=year%>&month=<%=month%>&date=<%=i%>">
-						<img src="${ pageContext.request.contextPath}/resources/img/pen.png" alt="일정추가" />
+						<img src="${ pageContext.request.contextPath}/resources/img/pen.png" alt="내용추가" />
 					</a>
 				</td>				
 				<%
@@ -120,6 +120,10 @@
 		return color;
 	}
 %>
+
+<a href="main.do">
+<button>메인으로돌아가기</button>
+</a>
 </body>
 </html>
 

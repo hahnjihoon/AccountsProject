@@ -1,0 +1,181 @@
+[00:04:54][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:04:55][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1098 ms
+[00:04:55][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[00:04:56][INFO ][FrameworkServlet.java:547] - Completed initialization in 1012 ms
+[00:13:08][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:13:09][WARN ][AbstractApplicationContext.java:559] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSession' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 45; columnNumber: 10; 요소 유형 "mapper"의 콘텐츠는 "(cache-ref|cache|resultMap*|parameterMap*|sql*|insert*|update*|delete*|select*)+"과(와) 일치해야 합니다.
+[00:13:09][ERROR][ContextLoader.java:313] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSession' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 45; columnNumber: 10; 요소 유형 "mapper"의 콘텐츠는 "(cache-ref|cache|resultMap*|parameterMap*|sql*|insert*|update*|delete*|select*)+"과(와) 일치해야 합니다.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:401)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:292)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4763)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5232)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1427)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1417)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 45; columnNumber: 10; 요소 유형 "mapper"의 콘텐츠는 "(cache-ref|cache|resultMap*|parameterMap*|sql*|insert*|update*|delete*|select*)+"과(와) 일치해야 합니다.
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:590)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
+	... 21 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 45; columnNumber: 10; 요소 유형 "mapper"의 콘텐츠는 "(cache-ref|cache|resultMap*|parameterMap*|sql*|insert*|update*|delete*|select*)+"과(와) 일치해야 합니다.
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:587)
+	... 24 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 45; columnNumber: 10; 요소 유형 "mapper"의 콘텐츠는 "(cache-ref|cache|resultMap*|parameterMap*|sql*|insert*|update*|delete*|select*)+"과(와) 일치해야 합니다.
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:376)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)
+	... 26 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 45; columnNumber: 10; 요소 유형 "mapper"의 콘텐츠는 "(cache-ref|cache|resultMap*|parameterMap*|sql*|insert*|update*|delete*|select*)+"과(와) 일치해야 합니다.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.handleEndElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.endElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 30 more
+[00:14:13][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:14:14][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1090 ms
+[00:14:14][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[00:14:15][INFO ][FrameworkServlet.java:547] - Completed initialization in 1006 ms
+[00:14:28][INFO ][CalendarController.java:42] - 일정추가폼이동ko.
+[00:14:29][WARN ][DispatcherServlet.java:1251] - No mapping for POST /Accounts/insertCalBoard.do
+[00:22:24][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:22:25][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1095 ms
+[00:22:25][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[00:22:26][INFO ][FrameworkServlet.java:547] - Completed initialization in 1020 ms
+[00:22:36][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:23:14][INFO ][MemberController.java:145] - enroll.do : Member [userid=K001, userpwd=1111, username=연습용, gender=M, age=20, phone=01055554444, email=asdf@asdf, hobby=reading,etc, etc=, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[00:23:14][INFO ][MemberController.java:149] - after encode : Member [userid=K001, userpwd=$2a$10$q2Q54MWu1CXYZAfJxJJVruxPKycdphjGSodfRoAcJnqDKqNMj.ibq, username=연습용, gender=M, age=20, phone=01055554444, email=asdf@asdf, hobby=reading,etc, etc=, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[00:23:21][INFO ][MemberController.java:96] - login.do : Member [userid=K001, userpwd=1111, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[00:23:28][INFO ][CalendarController.java:42] - 일정추가폼이동ko.
+[00:26:37][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:26:38][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1094 ms
+[00:26:38][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[00:26:39][INFO ][FrameworkServlet.java:547] - Completed initialization in 1012 ms
+[00:26:56][INFO ][CalendarController.java:52] - 일정목록보기ko.
+[00:30:17][INFO ][CalendarController.java:42] - 일정추가폼이동ko.
+[00:30:20][INFO ][CalendarController.java:52] - 일정목록보기ko.
+[00:31:40][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:31:41][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1095 ms
+[00:31:41][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[00:31:43][INFO ][FrameworkServlet.java:547] - Completed initialization in 1010 ms
+[00:31:49][INFO ][CalendarController.java:52] - 일정목록보기ko.
+[00:32:24][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:32:25][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1097 ms
+[00:32:25][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[00:32:26][INFO ][FrameworkServlet.java:547] - Completed initialization in 1012 ms
+[00:32:52][INFO ][CalendarController.java:52] - 일정목록보기ko.
+[00:44:31][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:44:32][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1101 ms
+[00:44:32][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[00:44:33][INFO ][FrameworkServlet.java:547] - Completed initialization in 1037 ms
+[00:44:44][INFO ][CalendarController.java:52] - 일정목록보기ko.
+[00:44:46][INFO ][CalendarController.java:42] - 일정추가폼이동ko.
+[00:45:44][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:45:45][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1089 ms
+[00:45:46][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[00:45:47][INFO ][FrameworkServlet.java:547] - Completed initialization in 1038 ms
+[00:46:12][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:46:13][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1099 ms
+[00:46:13][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[00:46:14][INFO ][FrameworkServlet.java:547] - Completed initialization in 1013 ms
+[00:46:22][INFO ][CalendarController.java:42] - 일정추가폼이동ko.
+[00:47:28][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:47:29][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1089 ms
+[00:47:29][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[00:47:30][INFO ][FrameworkServlet.java:547] - Completed initialization in 1020 ms
+[00:47:33][INFO ][CalendarController.java:42] - 일정추가폼이동ko.
+[00:48:25][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:48:26][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1093 ms
+[00:48:26][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[00:48:27][INFO ][FrameworkServlet.java:547] - Completed initialization in 1013 ms
+[00:48:30][INFO ][CalendarController.java:42] - 일정추가폼이동ko.
+[00:49:16][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:49:17][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1093 ms
+[00:49:18][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[00:49:19][INFO ][FrameworkServlet.java:547] - Completed initialization in 1013 ms
+[00:49:21][INFO ][CalendarController.java:42] - 일정추가폼이동ko.
+[00:49:23][INFO ][CalendarController.java:42] - 일정추가폼이동ko.
+[00:49:39][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:49:40][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1093 ms
+[00:49:40][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[00:49:41][INFO ][FrameworkServlet.java:547] - Completed initialization in 1017 ms
+[00:49:45][INFO ][CalendarController.java:42] - 일정추가폼이동ko.
+[00:55:11][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[00:55:12][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1098 ms
+[00:55:12][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[00:55:13][INFO ][FrameworkServlet.java:547] - Completed initialization in 1021 ms
+[00:55:25][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:26][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:26][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:27][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:27][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:27][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:27][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:27][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:27][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:28][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:28][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:28][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:28][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:28][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:28][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:29][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:29][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:29][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:29][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:29][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:29][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:30][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:30][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:30][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:31][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:32][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:32][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:32][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:33][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:33][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:33][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:33][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:34][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:35][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:36][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:36][INFO ][CalendarController.java:34] - 달력보기ko.
+[00:55:38][INFO ][CalendarController.java:52] - 일정목록보기ko.
+[00:55:40][INFO ][CalendarController.java:42] - 일정추가폼이동ko.
+[14:40:52][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:40:53][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1374 ms
+[14:40:53][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:40:54][INFO ][FrameworkServlet.java:547] - Completed initialization in 1254 ms
